@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="cdb-suite">
+	<test name="LITPmnlibvirtCDBSuite" preserve-order="true">
+		<classes>
+			<class name="com.ericsson.nms.litp.taf.test.cases.LITPmnlibvirtTestRunner">
+			  <methods>
+			    <include name="runERIClitpmnlibvirtTests"/>
+			    <include name="parseNosetestsReports"/>
+			  </methods> 
+			</class>
+		</classes>
+	</test>
+</suite>

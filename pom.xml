@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.ericsson.litp</groupId>
+		<artifactId>integration</artifactId>
+		<version>2.47.1</version>
+	</parent>
+
+    <groupId>com.ericsson.nms.litp.taf</groupId>
+    <artifactId>ERIClitpmnlibvirt-testware</artifactId>
+    <version>2.2.13-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+	<properties>
+		<taf_version>2.59.1</taf_version>
+	</properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>com.ericsson.cifwk.taf</groupId>
+					<artifactId>taf-maven-plugin</artifactId>
+					<version>${taf_version}</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>clean</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>com.ericsson.cifwk.taf</groupId>
+				<artifactId>taf-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
+	</dependencies>
+
+	<scm>
+		<tag>ERIClitpmnlibvirt-testware-1.0.43</tag>
+		<developerConnection>${ericsson.scm.url}</developerConnection>
+	</scm>
+
+	<modules>
+		<module>ERICTAFlitpmnlibvirt_CXP9031533</module>
+		<module>python-testcases</module>
+		<module>test-pom-ERICTAFlitpmnlibvirt</module>
+	</modules>
+
+</project>
